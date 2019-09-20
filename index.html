@@ -1,5 +1,5 @@
 <script>
-window.addEvent('message', (message) => {
-  window.opener.posteMessage(message);
+window.addEventListener('message', (message) => {
+  window.opener.postMessage(message);
 });
 </script>
