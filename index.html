@@ -1,5 +1,6 @@
 <script>
-window.addEventListener('message', (message) => {
-  window.opener.postMessage(message);
+window.addEventListener('message', (event) => {
+    console.log('recieved', event);
+    window.opener.postMessage(event.data);
 });
 </script>
