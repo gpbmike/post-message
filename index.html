@@ -13,7 +13,7 @@
 <script>
 window.addEventListener('message', (event) => {
     console.log('recieved', event);
-    window.parent.postMessage(event.data);
+    window.parent.postMessage(event.data, '*');
 });
 
 console.log('Listening...');
