@@ -8,12 +8,17 @@
 
 <body>
     <p>Test page for postMessage</p>
+    <button id="ready">Ready!</button>
 </body>
 
 <script>
 window.addEventListener('message', (event) => {
     console.log('recieved', event);
     window.parent.postMessage(event.data, '*');
+});
+
+document.getElementById('ready').addEventListener('click', () => {
+    window.parent.postMessage('ready', '*');
 });
 
 console.log('Listening...');
