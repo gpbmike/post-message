@@ -10,11 +10,11 @@
     <p>Test page for postMessage</p>
 </body>
 
-</html>
-
 <script>
 window.addEventListener('message', (event) => {
     console.log('recieved', event);
     window.opener.postMessage(event.data);
 });
 </script>
+
+</html>
